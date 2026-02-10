@@ -28,3 +28,4 @@ for mark in marks:
 print("Total valid students:",valid)
 print("Total failed students:",fail)
 
+
