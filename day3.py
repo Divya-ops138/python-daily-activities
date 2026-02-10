@@ -1,26 +1,30 @@
-full_name = input("Enter your name")
-email = input("Enter your email")
-mobile = input("Enter your mobile number")
-age = int(input("Enter your age"))
-valid = True
-if full_name.startswith(" ") or full_name.endswith(" "):
-    valid = False
-elif full_name.count(" ") < 1:
-    valid = False
+name=input("Enter your name:")
+n=int(input("Enter number of subjects: "))
+marks=[]
+for i in range(n):
+    m=int(input("Enter marks: "))
+    marks.append(m)
+valid=0
+fail=0
+for mark in marks:
+     if mark<0 or mark>100:
+        result="Invalid"
+     else:
+        valid+=1
+        if mark>=90:
+           result="Excellent"
+           if len(name)>5:
+               result="Excellent "+name
+        elif mark>=75:
+           result="Very Good"
+        elif mark>=60:
+           result="Good"
+        elif mark>=40:
+           result="Average"
+        else:
+           result="Fail"
+           fail += 1
+        print(mark,"=",result)
+print("Total valid students:",valid)
+print("Total failed students:",fail)
 
-elif email.count("@") != 1 or email.count(".") < 1:
-    valid = False
-elif email.startswith("@"):
-    valid = False
-elif len(mobile) != 10:
-    valid = False
-elif not mobile.isdigit():
-    valid = False
-elif mobile.startswith("0"):
-    valid = False
-elif age < 18 or age > 60:
-    valid = False
-if valid:
-    print("User Profile is VALID")
-else:
-    print("User Profile is INVALID")
