@@ -3,7 +3,11 @@ The purpose of this challenge is to strengthen programming fundamentals, improve
 
 Objective-:
 Practice Python programming daily
+
 Improve problem-solving skills
+
 Understand core programming concepts
+
 Build consistency in coding
+
 Develop clean and structured code
